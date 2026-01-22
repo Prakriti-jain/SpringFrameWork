@@ -1,5 +1,6 @@
 package org.example.iocDi;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,7 @@ Default scope - Singleton
 @Configuration
 class Bus {
     @Bean
+    @Qualifier("toyotaBean")
     public ToyotaEngine engineBean(){
         return new ToyotaEngine();
     }
@@ -32,7 +34,7 @@ public class ConfigurationsAndBeans {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(Bus.class);
         ToyotaEngine bus = context.getBean("engineBean", ToyotaEngine.class);
-        bus.start();
+//        bus.start();
     }
 
 }

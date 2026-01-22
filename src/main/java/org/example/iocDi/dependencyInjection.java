@@ -19,6 +19,7 @@ two types of String dependency -
 Configuration class - tells the spring to scan the given package with the annotations
 to make beans
  */
+
 interface IEngine {
     void start();
 }
@@ -63,7 +64,7 @@ class Vehicle {
 }
 
 @Configuration
-@ComponentScan(basePackages = "org.example.ioc")
+@ComponentScan(basePackages = "org.example.iocDi")
 class ConfigurationClass{
 
 }
