@@ -43,8 +43,8 @@ class ProdDataSource implements DataSource {
 @SpringBootApplication
 public class ProfileClass {
     public static void main(String[] args) {
-//        ApplicationContext context = SpringApplication.run(ProfileClass.class, args);
-        ApplicationContext context = new AnnotationConfigApplicationContext(ProfileClass.class);
+        ApplicationContext context = SpringApplication.run(ProfileClass.class, args);
+//        ApplicationContext context = new AnnotationConfigApplicationContext(ProfileClass.class);
         DataSource ds = context.getBean(DataSource.class);
         System.out.println(ds.getData());
 
