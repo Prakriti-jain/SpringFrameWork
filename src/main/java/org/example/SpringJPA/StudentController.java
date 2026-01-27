@@ -1,11 +1,9 @@
 package org.example.SpringJPA;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/stu")
@@ -31,4 +29,15 @@ public class StudentController {
     public List<StudentEntity> getEnrolled(){
         return service.getStudentWithCourse();
     }
+
+    @GetMapping("/{id}")
+    public Optional<StudentEntity> getById(@PathVariable int id){
+        return service.getById(id);
+    }
+
+    @PostMapping
+    public StudentEntity addStudent(@RequestBody StudentEntity student) {
+        return service.addStudent(student);
+    }
+
 }

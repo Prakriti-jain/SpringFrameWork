@@ -1,16 +1,21 @@
 package org.example.SpringJPA;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "course")
 public class CourseEntity {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String courseName;
+
 
     @ManyToOne
     @JoinColumn(name="student_id") //fk of student_id
+    @JsonIgnore
     private StudentEntity student;
 
 

@@ -1,0 +1,25 @@
+### sample data insertion
+POST http://localhost:8080/stu/seed
+
+### all students
+GET http://localhost:8080/stu/getall
+
+### enrolled students
+GET http://localhost:8080/stu/getEn
+
+### get by id
+GET http://localhost:8080/stu/3
+
+### add data
+POST http://localhost:8080/stu
+Content-Type: application/json
+
+{
+  "name": "Prak",
+  "courses": [
+    {
+      "courseName": "ADA"
+    }
+  ]
+}
+
