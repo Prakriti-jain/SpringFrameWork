@@ -1,0 +1,8 @@
+### this will print not found
+GET http://localhost:8080/stud/4
+
+### this will print for illegal argument
+GET http://localhost:8080/stud/-2
+
+### this will print for generic handling
+GET http://localhost:8080/stud/ahsj

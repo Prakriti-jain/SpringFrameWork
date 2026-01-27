@@ -1,0 +1,5 @@
+### this will give error
+GET http://localhost:8080/customer/2
+
+### this will not give exception
+GET http://localhost:8080/customer/1
