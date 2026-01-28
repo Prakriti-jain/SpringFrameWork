@@ -36,15 +36,15 @@ private Student student;
 - Join column indicates ki student_id foreign key hai in enrollment table
 
 
-✅ @JoinColumn = FK creates
-✅ mappedBy = FK already exists there
+@JoinColumn = FK creates
+mappedBy = FK already exists there
 
 
 Relation	             Foreign key kaha banti hai?
-ManyToOne	             ✅ Many side table me
-OneToMany(mappedBy)	     ❌ FK create nahi karta
-OneToOne	             ✅ Jis side @JoinColumn
-ManyToMany	             ✅ Join table me 2 FK
+ManyToOne	             Many side table me
+OneToMany(mappedBy)	     FK create nahi karta
+OneToOne	             Jis side @JoinColumn
+ManyToMany	             Join table me 2 FK
 */
 
 

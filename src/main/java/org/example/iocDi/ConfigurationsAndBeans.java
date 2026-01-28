@@ -34,7 +34,7 @@ public class ConfigurationsAndBeans {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(Bus.class);
         ToyotaEngine bus = context.getBean("engineBean", ToyotaEngine.class);
-//        bus.start();
+        bus.start();
     }
 
 }
